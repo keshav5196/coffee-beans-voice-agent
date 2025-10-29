@@ -13,6 +13,9 @@ import logging
 import sys
 from pathlib import Path
 
+# Add project root to Python path so we can import src module
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 

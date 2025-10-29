@@ -10,6 +10,11 @@ This provides a simple, clean interface to test the agent without menus.
 
 import asyncio
 import sys
+from pathlib import Path
+
+# Add project root to Python path so we can import src module
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from test_phase2 import InteractiveLLMAgent
 
 
